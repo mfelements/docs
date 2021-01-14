@@ -1,0 +1,46 @@
+name: Docs
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+
+  docs:
+    name: Docs generate
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Set up Node
+      uses: actions/setup-node@v2
+      with:
+        node-version: '15'
+        check-latest: true
+
+    - name: Check out the code
+      uses: actions/checkout@v2
+
+    - name: Get dependencies
+      run: yarn
+
+    - name: Generate docs
+      run: yarn docs
+
+    - name: Changing branch
+      uses: actions/checkout@v2
+      with:
+        ref: github-pages
+
+    - name: Upload to repository
+      run: |
+        GIT_SHA=$(git rev-parse --short HEAD)
+        git config --global user.email "docs-bot@bassteam.freeland"
+        git config --global user.name "BASSTeam's Docs Bot"
+        mv .git /tmp/generated-docs
+        cd /tmp/generated-docs
+        touch /tmp/generated-docs/.nojekyll
+        git add .
+        git commit -m "Update documentation according to $GIT_SHA"
+        git push
