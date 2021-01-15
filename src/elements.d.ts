@@ -43,3 +43,37 @@ export class Card extends Element {
     height: string
     color: string
 }
+
+/**
+ * Represents the reansparent container that may be edited in the future
+ */
+export class Editable extends Element {
+    type: 'editable'
+
+    /**
+     * Unique string to identify this container among others
+     */
+    id: string
+
+    /**
+     * Default data for this container. Will be shown before first change
+     */
+    default: Array<Element | string>
+}
+
+/**
+ * Edits specified container. Has no side-effects on the display
+ */
+export class Edit extends Element {
+    type: 'edit'
+
+    /**
+     * ID that identifies the container to edit
+     */
+    id: string
+
+    /**
+     * Data for the container specified by id
+     */
+    data: Array<Element | string>
+}
