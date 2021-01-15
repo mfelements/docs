@@ -11,6 +11,7 @@ export class Page extends Element {
 
 /**
  * Represents fullwidth Material Design block with content
+ * ![](media://block.png)
  */
 export class Block extends Element {
     type: 'block'

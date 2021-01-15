@@ -4,5 +4,6 @@
     "exclude": "node_modules/**",
     "readme": "src/index.md",
     "name": "MFElements Documentation",
-    "theme": "theme"
+	"theme": "theme",
+	"media": "assets"
 }
