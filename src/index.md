@@ -55,8 +55,9 @@ Host: service.com
 
 ### Response
 
-The response should contain http headers:
+The response should contain next http headers:
 ```http
+HTTP/1.1 200 OK
 Content-Type: application/json
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: *
