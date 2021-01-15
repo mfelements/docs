@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Element | MFElements Documentation</title>
+	<title>Edit | MFElements Documentation</title>
 	<meta name="description" content="Documentation for MFElements Documentation">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -57,13 +57,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_base_d_.html">&quot;base.d&quot;</a>
+					<a href="../modules/_elements_d_.html">&quot;elements.d&quot;</a>
 				</li>
 				<li>
-					<a href="_base_d_.element.html">Element</a>
+					<a href="_elements_d_.edit.html">Edit</a>
 				</li>
 			</ul>
-			<h1>Class Element</h1>
+			<h1>Class Edit</h1>
 		</div>
 	</div>
 </header>
@@ -73,41 +73,18 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>The class does not represent itself, but any child.</p>
+						<p>Edits specified container. Has no side-effects on the display</p>
 					</div>
-					<p>For example, <a href="_elements_d_.page.html" class="tsd-signature-type">Page</a></p>
-					<dl class="tsd-comment-tags">
-						<dt>abstract</dt>
-						<dd></dd>
-					</dl>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Element</span>
+						<a href="_base_d_.element.html" class="tsd-signature-type">Element</a>
 						<ul class="tsd-hierarchy">
 							<li>
-								<a href="_elements_d_.page.html" class="tsd-signature-type">Page</a>
-							</li>
-							<li>
-								<a href="_elements_d_.block.html" class="tsd-signature-type">Block</a>
-							</li>
-							<li>
-								<a href="_elements_d_.tblock.html" class="tsd-signature-type">TBlock</a>
-							</li>
-							<li>
-								<a href="_elements_d_.button.html" class="tsd-signature-type">Button</a>
-							</li>
-							<li>
-								<a href="_elements_d_.card.html" class="tsd-signature-type">Card</a>
-							</li>
-							<li>
-								<a href="_elements_d_.editable.html" class="tsd-signature-type">Editable</a>
-							</li>
-							<li>
-								<a href="_elements_d_.edit.html" class="tsd-signature-type">Edit</a>
+								<span class="target">Edit</span>
 							</li>
 						</ul>
 					</li>
@@ -120,7 +97,9 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_base_d_.element.html#type" class="tsd-kind-icon">type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_elements_d_.edit.html#data" class="tsd-kind-icon">data</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_elements_d_.edit.html#id" class="tsd-kind-icon">id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="_elements_d_.edit.html#type" class="tsd-kind-icon">type</a></li>
 							</ul>
 						</section>
 					</div>
@@ -129,12 +108,43 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="type" class="tsd-anchor"></a>
-					<h3>type</h3>
-					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="data" class="tsd-anchor"></a>
+					<h3>data</h3>
+					<div class="tsd-signature tsd-kind-icon">data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="_base_d_.element.html" class="tsd-signature-type">Element</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/mfelements/docs/blob/a424ed1/src/base.d.ts#L8">base.d.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/mfelements/docs/blob/a424ed1/src/elements.d.ts#L78">elements.d.ts:78</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Data for the container specified by id</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="id" class="tsd-anchor"></a>
+					<h3>id</h3>
+					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/mfelements/docs/blob/a424ed1/src/elements.d.ts#L73">elements.d.ts:73</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>ID that identifies the container to edit</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+					<a name="type" class="tsd-anchor"></a>
+					<h3>type</h3>
+					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"edit"</span></div>
+					<aside class="tsd-sources">
+						<p>Overrides <a href="_base_d_.element.html">Element</a>.<a href="_base_d_.element.html#type">type</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/mfelements/docs/blob/a424ed1/src/elements.d.ts#L68">elements.d.ts:68</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -146,28 +156,52 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/_base_d_.html">&quot;base.d&quot;</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/_elements_d_.html">&quot;elements.d&quot;</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="_elements_d_.block.html" class="tsd-kind-icon">Block</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="_elements_d_.button.html" class="tsd-kind-icon">Button</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="_elements_d_.card.html" class="tsd-kind-icon">Card</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-module">
-						<a href="_base_d_.element.html" class="tsd-kind-icon">Element</a>
+						<a href="_elements_d_.edit.html" class="tsd-kind-icon">Edit</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_base_d_.element.html#type" class="tsd-kind-icon">type</a>
+								<a href="_elements_d_.edit.html#data" class="tsd-kind-icon">data</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_elements_d_.edit.html#id" class="tsd-kind-icon">id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+								<a href="_elements_d_.edit.html#type" class="tsd-kind-icon">type</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="_elements_d_.editable.html" class="tsd-kind-icon">Editable</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="_elements_d_.page.html" class="tsd-kind-icon">Page</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="_elements_d_.tblock.html" class="tsd-kind-icon">TBlock</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
