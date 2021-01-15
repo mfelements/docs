@@ -1,3 +1,3 @@
-export class Component {
+export class Element {
     type: string
 }
