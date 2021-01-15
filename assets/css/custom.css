@@ -1,0 +1,22 @@
+code.language-http .hljs-meta{
+    color: #006400;
+}
+
+code.language-http .hljs-attribute{
+    color: #4169e1;
+}
+
+code.language-http .hljs-number,
+code.language-json .hljs-number{
+    color: #daa520;
+}
+
+code.language-http .json .hljs-literal,
+code.language-json .hljs-literal{
+    color: blue;
+}
+
+code.language-http .json .hljs-attr,
+code.language-json .hljs-attr{
+    color: dodgerblue;
+}

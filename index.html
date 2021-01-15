@@ -7,6 +7,7 @@
 	<meta name="description" content="Documentation for MFElements Documentation">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="assets/css/custom.css">
 </head>
 <body>
 <header>
@@ -109,10 +110,11 @@
 				<a href="#response" id="response" style="color: inherit; text-decoration: none;">
 					<h3>Response</h3>
 				</a>
-				<p>The response should contain http headers:</p>
-				<pre><code class="language-http">Content-Type: application/json
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Headers: *</code></pre>
+				<p>The response should contain next http headers:</p>
+				<pre><code class="language-http"><span class="hljs-meta">HTTP/1.1</span> <span class="hljs-number">200</span> OK
+<span class="hljs-attribute">Content-Type</span><span class="hljs-punctuation">: </span>application/json
+<span class="hljs-attribute">Access-Control-Allow-Origin</span><span class="hljs-punctuation">: </span>*
+<span class="hljs-attribute">Access-Control-Allow-Headers</span><span class="hljs-punctuation">: </span>*</code></pre>
 				<p>Response body - encoded object in JSON with just one field - <strong>error</strong> or <strong>data</strong>.</p>
 				<p><strong>error</strong> should be returned only when exception occurs on backend side and represents a string with error description for user. Example:</p>
 				<pre><code class="language-json">{
@@ -175,5 +177,6 @@ Access-Control-Allow-Headers: *</code></pre>
 </div>
 <div class="overlay"></div>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/custom.js"></script>
 </body>
 </html>
