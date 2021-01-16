@@ -7,9 +7,14 @@ on:
     branches: [ master ]
 
 jobs:
-	name: Lint
+
+  lint:
+    name: Linting
     runs-on: ubuntu-latest
     steps:
 
-	- name: Validate
-      uses: zbeekman/EditorConfig-Action@v1.1.0
+    - name: Check out the code
+      uses: actions/checkout@v2
+
+    - name: Validate
+      uses: zbeekman/EditorConfig-Action@28b76e7
