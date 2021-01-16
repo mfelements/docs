@@ -1,0 +1,15 @@
+name: Editorconfig lint
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+	name: Lint
+    runs-on: ubuntu-latest
+    steps:
+
+	- name: Validate
+      uses: zbeekman/EditorConfig-Action@v1.1.0
