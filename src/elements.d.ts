@@ -76,4 +76,23 @@ export class Edit extends Element {
      * Data for the container specified by id
      */
     data: Array<Element | string>
+
+export class Dialog extends Element {
+	type: 'dialog'
+
+	/**
+	 * Text to be shown in the dialog popup
+	 */
+	text: string
+
+	/**
+	 * Text to be shown on the button that opens the dialog
+	 */
+	btnText: string
+
+	/**
+	 * Array of buttons. Each button does action specified with `onClick` property and closes the dialog.
+	 * To just close the dialog do not specify `onClick` on related button
+	 */
+	buttons: Button[]
 }
