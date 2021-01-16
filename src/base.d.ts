@@ -5,5 +5,5 @@
  * @abstract
  */
 export abstract class Element {
-    type: string
+	type: string
 }
