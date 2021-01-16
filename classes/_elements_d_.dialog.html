@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Page | MFElements Documentation</title>
+	<title>Dialog | MFElements Documentation</title>
 	<meta name="description" content="Documentation for MFElements Documentation">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -60,23 +60,16 @@
 					<a href="../modules/_elements_d_.html">&quot;elements.d&quot;</a>
 				</li>
 				<li>
-					<a href="_elements_d_.page.html">Page</a>
+					<a href="_elements_d_.dialog.html">Dialog</a>
 				</li>
 			</ul>
-			<h1>Class Page</h1>
+			<h1>Class Dialog</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Class represents a page. Will replace current page if included in API answer</p>
-					</div>
-				</div>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -84,7 +77,7 @@
 						<a href="_base_d_.element.html" class="tsd-signature-type">Element</a>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">Page</span>
+								<span class="target">Dialog</span>
 							</li>
 						</ul>
 					</li>
@@ -97,9 +90,10 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_elements_d_.page.html#children" class="tsd-kind-icon">children</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_elements_d_.page.html#title" class="tsd-kind-icon">title</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="_elements_d_.page.html#type" class="tsd-kind-icon">type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_elements_d_.dialog.html#btntext" class="tsd-kind-icon">btn<wbr>Text</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_elements_d_.dialog.html#buttons" class="tsd-kind-icon">buttons</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_elements_d_.dialog.html#text" class="tsd-kind-icon">text</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="_elements_d_.dialog.html#type" class="tsd-kind-icon">type</a></li>
 							</ul>
 						</section>
 					</div>
@@ -108,33 +102,59 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="children" class="tsd-anchor"></a>
-					<h3>children</h3>
-					<div class="tsd-signature tsd-kind-icon">children<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="_base_d_.element.html" class="tsd-signature-type">Element</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="btntext" class="tsd-anchor"></a>
+					<h3>btn<wbr>Text</h3>
+					<div class="tsd-signature tsd-kind-icon">btn<wbr>Text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/mfelements/docs/blob/b92edee/src/elements.d.ts#L8">elements.d.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/mfelements/docs/blob/b92edee/src/elements.d.ts#L92">elements.d.ts:92</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Text to be shown on the button that opens the dialog</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="title" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> title</h3>
-					<div class="tsd-signature tsd-kind-icon">title<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="buttons" class="tsd-anchor"></a>
+					<h3>buttons</h3>
+					<div class="tsd-signature tsd-kind-icon">buttons<span class="tsd-signature-symbol">:</span> <a href="_elements_d_.button.html" class="tsd-signature-type">Button</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/mfelements/docs/blob/b92edee/src/elements.d.ts#L9">elements.d.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/mfelements/docs/blob/b92edee/src/elements.d.ts#L98">elements.d.ts:98</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Array of buttons. Each button does action specified with <code>onClick</code> property and closes the dialog.
+							To just close the dialog do not specify <code>onClick</code> on related button</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="text" class="tsd-anchor"></a>
+					<h3>text</h3>
+					<div class="tsd-signature tsd-kind-icon">text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/mfelements/docs/blob/b92edee/src/elements.d.ts#L87">elements.d.ts:87</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Text to be shown in the dialog popup</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
 					<a name="type" class="tsd-anchor"></a>
 					<h3>type</h3>
-					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"page"</span></div>
+					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"dialog"</span></div>
 					<aside class="tsd-sources">
 						<p>Overrides <a href="_base_d_.element.html">Element</a>.<a href="_base_d_.element.html#type">type</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/mfelements/docs/blob/b92edee/src/elements.d.ts#L7">elements.d.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/mfelements/docs/blob/b92edee/src/elements.d.ts#L82">elements.d.ts:82</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -165,33 +185,36 @@
 					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="_elements_d_.card.html" class="tsd-kind-icon">Card</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class tsd-parent-kind-module">
 						<a href="_elements_d_.dialog.html" class="tsd-kind-icon">Dialog</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_elements_d_.dialog.html#btntext" class="tsd-kind-icon">btn<wbr>Text</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_elements_d_.dialog.html#buttons" class="tsd-kind-icon">buttons</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_elements_d_.dialog.html#text" class="tsd-kind-icon">text</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+								<a href="_elements_d_.dialog.html#type" class="tsd-kind-icon">type</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="_elements_d_.edit.html" class="tsd-kind-icon">Edit</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="_elements_d_.editable.html" class="tsd-kind-icon">Editable</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-class tsd-parent-kind-module">
+					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="_elements_d_.page.html" class="tsd-kind-icon">Page</a>
-						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_elements_d_.page.html#children" class="tsd-kind-icon">children</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_elements_d_.page.html#title" class="tsd-kind-icon">title</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
-								<a href="_elements_d_.page.html#type" class="tsd-kind-icon">type</a>
-							</li>
-						</ul>
 					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="_elements_d_.tblock.html" class="tsd-kind-icon">TBlock</a>
 					</li>
