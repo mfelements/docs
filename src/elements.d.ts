@@ -76,6 +76,7 @@ export class Edit extends Element {
      * Data for the container specified by id
      */
     data: Array<Element | string>
+}
 
 export class Dialog extends Element {
 	type: 'dialog'
